@@ -66,3 +66,10 @@ footer {
     }
   }
 }
+.empty-div {
+  display: none;
+  @include min-1440 {
+    display: block;
+    width: 194px;
+  }
+}

@@ -107,7 +107,9 @@ function showPass(showPass) {
   // sibling.focus();
   if (showPass.checked) {
     sibling.setAttribute("type", "text");
+    $(".password-show i").addClass("active");
   } else {
     sibling.setAttribute("type", "password");
+    $(".password-show i").removeClass("active");
   }
 }
