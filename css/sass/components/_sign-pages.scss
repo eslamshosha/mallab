@@ -222,7 +222,7 @@ html[dir="rtl"] .custom-tel[type="tel"] {
 .forget-link {
   margin-top: 12px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -330,7 +330,7 @@ html[dir="rtl"] .custom-tel[type="tel"] {
 .form-btn-cont {
   width: 100%;
   margin-bottom: 12px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .form-btn {
@@ -364,6 +364,11 @@ html[dir="rtl"] .custom-tel[type="tel"] {
   font-size: 18px;
   font-weight: 500;
   color: $hover;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  outline: none !important;
   text-decoration: none !important;
   @include tr;
   &:hover {
@@ -414,6 +419,13 @@ html[dir="ltr"] .return-link i {
   margin: 0;
   margin-bottom: 30px;
 }
+
+.form-pargh {
+  font-weight: 500;
+  font-size: 18px;
+  color: #3e3e3e;
+  margin-bottom: 45px;
+}
 .custom-link {
   display: flex;
   align-items: center;
@@ -442,25 +454,25 @@ html[dir="ltr"] .return-link i {
   gap: 20px;
   justify-content: center;
   width: 100%;
-  max-width: 205px;
+  max-width: 340px;
 }
 .digit-group input {
-  width: 47px;
+  width: 100%;
   max-width: 100%;
-  height: 55px;
-  line-height: 55px;
+  height: 60px;
+  line-height: 60px;
   outline: none;
-  border: 2px solid #e9e9e9;
+  border: 1px solid #000;
   background-color: transparent;
   text-align: center;
-  font-size: 25px;
-  font-weight: 400;
+  font-size: 22px;
+  font-weight: 500;
   color: $main;
-  margin: 0 3px;
-  border-radius: 10px;
+  margin: 0;
+  border-radius: 8px;
   transition: all 0.3s ease-in-out;
   &:focus {
-    border-color: $main;
+    border-color: $hover;
     outline: none;
   }
 }
