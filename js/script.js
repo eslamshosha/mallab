@@ -188,6 +188,49 @@ $(document).ready(function () {
       clickable: true,
     },
   });
+  var productThumbs = new Swiper(".product-thumbs", {
+    slidesPerView: 4,
+    // loop: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      0: {
+        spaceBetween: 10,
+      },
+      767: {
+        spaceBetween: 15,
+      },
+      1199: {
+        spaceBetween: 15,
+      },
+    },
+  });
+  var productImgs = new Swiper(".product-imgs", {
+    spaceBetween: 1,
+    // loop: true,
+    thumbs: {
+      swiper: productThumbs,
+    },
+  });
+  ///////// **product-qty** /////////
+  $(".qty-plus").on("click", function () {
+    var $parentElm = $(this).parents(".item-qty");
+    var maxVal = parseInt($parentElm.find(".qty-input").attr("data-max"));
+    var value = $parentElm.find(".qty-input").val();
+    if (value < maxVal) {
+      value++;
+    }
+    $parentElm.find(".qty-input").val(value);
+  });
+  $(".qty-minus").on("click", function () {
+    var $parentElm = $(this).parents(".item-qty");
+    var minVal = parseInt($parentElm.find(".qty-input").attr("data-min"));
+    var value = $parentElm.find(".qty-input").val();
+    if (value > minVal) {
+      value--;
+    }
+    $parentElm.find(".qty-input").val(value);
+  });
 });
 //showPass
 function showPass(showPass) {
