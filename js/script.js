@@ -135,6 +135,59 @@ $(document).ready(function () {
         otp_fields.eq(index).val(value);
       });
     });
+  ///////// ** offer** /////////
+  var specials = new Swiper(".offer-slider .swiper", {
+    loop: true,
+    autoplay: true,
+    autoHeight: true,
+    slidesPerView: 1,
+    pagination: {
+      el: ".offer-slider .swiper-pagination",
+      clickable: true,
+    },
+  });
+  ///////// **category-section** /////////
+  var categorySlider = new Swiper(".category-section .swiper", {
+    loop: true,
+    autoplay: true,
+    pagination: {
+      el: ".category-slider .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".category-slider .swiper-btn-next",
+      prevEl: ".category-slider .swiper-btn-prev",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      767: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+      1199: {
+        slidesPerView: 8,
+        spaceBetween: 30,
+      },
+    },
+  });
+  //bannerSlider
+  var bannerSlider = new Swiper(".banner-section .swiper", {
+    loop: true,
+    autoplay: true,
+    autoHeight: true,
+    slidesPerView: 1,
+    pagination: {
+      el: ".banner-slider .swiper-pagination",
+      clickable: true,
+    },
+  });
 });
 //showPass
 function showPass(showPass) {
