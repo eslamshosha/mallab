@@ -190,15 +190,18 @@ $(document).ready(function () {
   });
   var productThumbs = new Swiper(".product-thumbs", {
     slidesPerView: 4,
+    direction: 'vertical',
     // loop: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
     breakpoints: {
       0: {
         spaceBetween: 10,
+        direction: 'horizontal',
       },
       767: {
         spaceBetween: 15,
+        direction: 'vertical',
       },
       1199: {
         spaceBetween: 15,
