@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>mallab</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link href="https://iconsax.gitlab.io/i/icons.css" rel="stylesheet" />
+    <link href="css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/sal.css" />
+    <link rel="stylesheet" href="css/select2.min.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <!-- preloader -->
+    <div class="preloader">
+      <div class="progress">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <!-- preloader -->
+    <!-- header section -->
+    <header>
+      <div class="container">
+        <div class="top-header">
+          <div class="nav-header">
+            <a href="index.html" class="logo">
+              <h2>ملاعب</h2>
+            </a>
+            <div class="search-cont">
+              <div class="search-section">
+                <form class="search-form">
+                  <input
+                    class="search-input"
+                    type="text"
+                    name=""
+                    value=""
+                    placeholder="ابحث عن ما تريدة"
+                  />
+                  <button class="search-button">
+                    <i class="iconsax" icon-name="search-normal-2"></i>
+                  </button>
+                </form>
+              </div>
+              <button class="filter-btn">
+                <i class="iconsax" icon-name="filter-search"></i>
+                تصفية
+              </button>
+            </div>
+            <div class="header-btn">
+              <a href="#" class="cart-ancor">
+                <i class="iconsax" icon-name="shopping-cart"></i>
+                <span class="counter">0</span>
+              </a>
+              <button class="menu-bars" id="menu-id">
+                <i class="iconsax" icon-name="hamburger-menu"></i>
+              </button>
+            </div>
+            <div class="navgition">
+              <div class="nav-head">
+                <button class="close-menu">
+                  <i class="iconsax" icon-name="x"></i>
+                </button>
+              </div>
+              <ul class="big-menu list-unstyled">
+                <li>
+                  <a href="index.html"> الرئيسية </a>
+                </li>
+                <li>
+                  <a href="#"> ملاعب</a>
+                </li>
+                <li>
+                  <a href="#"> اكادميات</a>
+                </li>
+                <li>
+                  <a href="#"> بطولات</a>
+                </li>
+                <li class="active">
+                  <a href="#"> المتجر</a>
+                </li>
+                <li>
+                  <a href="#"> مقاطع</a>
+                </li>
+                <li>
+                  <a href="contact.html"> تواصل معنا</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header section     -->
+    <!-- Start Breadcrumb -->
+    <section class="breadcrumb-sec">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-li">
+            <a href="index.html" class="breadcrumb-a"> الرئيسية </a>
+          </li>
+          <li class="breadcrumb-li">
+            <a href="store.html" class="breadcrumb-a"> المتجر </a>
+          </li>
+          <li class="breadcrumb-li">
+            <span> اكمال الطلب </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- End Breadcrumb -->
+    <!-- Start Page Content -->
+    <section class="content-section single-content">
+      <div class="container">
+        <div class="checkout-grid">
+          <div class="checkout-address">
+            <form action="">
+              <ul
+                class="nav nav-tabs add-address-cont"
+                id="myTab"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link add-select-address active"
+                    id="add-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#add"
+                    href="#add"
+                    type="button"
+                    role="tab"
+                    aria-controls="add"
+                    aria-selected="true"
+                  >
+                    <i class="fa-regular fa-plus"></i>
+                    اضافة عنوان جديد
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link add-select-address"
+                    id="choose-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#choose"
+                    href="#choose"
+                    type="button"
+                    role="tab"
+                    aria-controls="choose"
+                    aria-selected="false"
+                  >
+                    <i class="las la-address-book"></i>
+                    اختر من عناوينك
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="add"
+                  role="tabpanel"
+                  aria-labelledby="add-tab"
+                >
+                  <div class="checkout-input">
+                    <div class="form-group">
+                      <label class="form-label">الاسم بالكامل</label>
+                      <input type="text" class="form-input custom-input" />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">المدينة</label>
+                      <div class="form-input-relative custom-input">
+                        <i class="las la-angle-down angle-select"></i>
+                        <i
+                          class="iconsax angle-select"
+                          icon-name="chevron-down"
+                        ></i>
+
+                        <select class="select_input select2-city" name="city">
+                          <option value="two">الرياض</option>
+                          <option value="three">المدينة</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">عنوان التسليم</label>
+                      <input type="text" class="form-input custom-input" />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">رقم الدور والمبني</label>
+                      <input type="text" class="form-input custom-input" />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">تفاصيل اضافية</label>
+                      <input type="text" class="form-input custom-input" />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">رقم الموبايل</label>
+                      <input type="tel" class="form-input custom-input" />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">البريد الالكنروني</label>
+                      <input type="email" class="form-input custom-input" />
+                    </div>
+                    <div class="form-group">
+                      <div class="check-width">
+                        <label class="check-label">
+                          <input type="checkbox" />
+                          <span class="checkmark custom-checkmark"></span>
+                          <span class="check-text"
+                            >موافقة علي جميع الشروط والاحكام</span
+                          >
+                        </label>
+                      </div>
+                    </div>
+                    <button type="submit" class="apply-btn">حفظ</button>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="choose"
+                  role="tabpanel"
+                  aria-labelledby="choose-tab"
+                >
+                  <div class="address-group">
+                    <span class="address-head">اختر من عناوينك</span>
+                    <div class="check-group">
+                      <div class="check-width">
+                        <label class="check-label">
+                          <input type="radio" name="address" />
+                          <span class="checkmark"></span>
+                          <span class="span-text"
+                            >الدمام , السعوديه , مركز باشالوش الوطني</span
+                          >
+                        </label>
+                      </div>
+                      <div class="check-width">
+                        <label class="check-label">
+                          <input type="radio" name="address" />
+                          <span class="checkmark"></span>
+                          <span class="span-text"
+                            >الدمام , السعوديه , مركز باشالوش الوطني</span
+                          >
+                        </label>
+                      </div>
+                      <div class="check-width">
+                        <label class="check-label">
+                          <input type="radio" name="address" />
+                          <span class="checkmark"></span>
+                          <span class="span-text"
+                            >الدمام , السعوديه , مركز باشالوش الوطني</span
+                          >
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="checkout-pay">
+            <form action="">
+              <div class="checkout-item">
+                <div class="checkout-info">
+                  <figure>
+                    <img src="images/offer/img.png" alt="product" />
+                  </figure>
+                  <div class="checkout-name">
+                    حذاء رياضي خاص من ماركة اديداس
+                  </div>
+                  <div class="checkout-span">ك:٢</div>
+                </div>
+                <div class="order-price">245 ريال</div>
+              </div>
+              <div class="checkout-item">
+                <div class="checkout-info">
+                  <figure>
+                    <img src="images/offer/img.png" alt="product" />
+                  </figure>
+                  <div class="checkout-name">
+                    حذاء رياضي خاص من ماركة اديداس
+                  </div>
+                  <div class="checkout-span">ك:٢</div>
+                </div>
+                <div class="order-price">245 ريال</div>
+              </div>
+              <div class="checkout-table-cont">
+                <div class="checkout-table">
+                  <span class="checkout-text"> المجموع </span>
+                  <div class="order-price">245 ريال</div>
+                </div>
+                <div class="checkout-table">
+                  <span class="checkout-text"> التوصيل </span>
+                  <div class="order-price">245 ريال</div>
+                </div>
+                <div class="checkout-table">
+                  <span class="checkout-text"> الخصم </span>
+                  <div class="order-price">245 ريال</div>
+                </div>
+                <div class="checkout-table total">
+                  <span class="checkout-text"> المجموع الكلي </span>
+                  <div class="order-price">245 ريال</div>
+                </div>
+              </div>
+              <div class="checkout-dicount">
+                <input
+                  type="text"
+                  placeholder="كود خصم"
+                  class="discount-input"
+                />
+                <button type="button" class="discount-btn">
+                  اضافة الكوبون
+                </button>
+              </div>
+              <div class="pay-group">
+                <div class="check-group">
+                  <div class="check-width">
+                    <label class="check-label">
+                      <input type="radio" name="address" />
+                      <span class="checkmark"></span>
+                      <span class="span-text">بنك</span>
+                    </label>
+                    <figure class="pay-img">
+                      <img src="images/pay-img.png" alt="pay-img" />
+                    </figure>
+                  </div>
+                  <div class="check-width">
+                    <label class="check-label">
+                      <input type="radio" name="address" />
+                      <span class="checkmark"></span>
+                      <span class="span-text">مدي</span>
+                    </label>
+                    <img src="images/pay-img.png" alt="pay-img" />
+                  </div>
+                  <div class="check-width">
+                    <label class="check-label">
+                      <input type="radio" name="address" />
+                      <span class="checkmark"></span>
+                      <span class="span-text">فوري</span>
+                    </label>
+                    <img src="images/pay-img.png" alt="pay-img" />
+                  </div>
+                  <div class="check-width">
+                    <label class="check-label">
+                      <input type="radio" name="address" />
+                      <span class="checkmark"></span>
+                      <span class="span-text">الدفع عند الاستلام</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="custom-btn">اتمام الشراء</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Page Content -->
+    <!-- footer section -->
+    <footer>
+      <div class="container">
+        <div class="footer-cont">
+          <div class="footer-info">
+            <a href="index.html" class="logo">
+              <h2>ملاعب</h2>
+            </a>
+            <div class="copy-rights">حقوق النشر © 2017 ملاعب مصر</div>
+            <div class="social">
+              <a href="#" class="social-link">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fa-brands fa-square-facebook"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-list">
+            <ul>
+              <li><a href="#">الشروط والاحكام</a></li>
+              <li><a href="#">عن التطبيق</a></li>
+              <li><a href="#">شروط الخصوصية</a></li>
+              <li><a href="#">الاسئلة الشائعة</a></li>
+            </ul>
+          </div>
+          <div class="empty-div"></div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer section -->
+    <!-- arrow to top -->
+    <button class="arrow-top">
+      <i class="iconsax" icon-name="arrow-up"></i>
+    </button>
+    <!-- arrow to top -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sal.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

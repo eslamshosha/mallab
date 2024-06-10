@@ -1,0 +1,297 @@
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 40px;
+  @include max-991 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+.checkout-pay,
+.checkout-address {
+  box-shadow: 0px 4px 40px 0px #00000014;
+  background-color: $white;
+  padding: 40px 32px;
+}
+.add-address-cont {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 30px;
+  border: none;
+}
+.add-select-address {
+  height: 56px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: $white !important;
+  border: 1px solid $hover !important;
+  @include flexCenter;
+  gap: 12px;
+  color: $hover;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  border-radius: 8px !important;
+  transition: all 0.3s ease-in-out;
+  i {
+    font-size: 24px;
+  }
+  &.active {
+    color: $white !important;
+    background-color: $hover !important;
+  }
+  &:hover {
+    color: $white !important;
+    background-color: $hover !important;
+  }
+  @include min-1440 {
+    font-size: 18px;
+  }
+}
+.checkout-input {
+  text-align: start;
+  .form-group {
+    margin-bottom: 30px;
+  }
+  .form-label {
+    color: rgba($color: #000000, $alpha: 0.4);
+    font-size: 18px;
+  }
+  .custom-input {
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    height: 50px;
+  }
+  .check-label input[type="checkbox"] ~ .checkmark {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+  }
+  .check-label .custom-checkmark:after {
+    font-size: 14px;
+  }
+}
+.apply-btn {
+  width: 128px;
+  max-width: 100%;
+  height: 40px;
+  margin-inline-end: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+  @include flexCenter;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 14px;
+  color: $white;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  flex-shrink: 0;
+  background-color: $hover;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    text-decoration: none;
+    color: $white;
+    background-color: $main;
+  }
+}
+.address-group {
+  .check-width {
+    margin-bottom: 24px;
+  }
+  .check-label .checkmark {
+    border-color: $black;
+  }
+  .check-label input:checked ~ .checkmark {
+    border-color: $hover;
+  }
+}
+.address-head {
+  font-weight: 500;
+  font-size: 18px;
+  color: $black;
+  margin-bottom: 30px;
+  display: block;
+}
+.span-text {
+  font-weight: 400;
+  font-size: 16px;
+  color: #353535;
+}
+.checkout-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 24px 0;
+  border-bottom: 1px solid #e5e5e5;
+  &:first-of-type {
+    padding-top: 0;
+  }
+}
+.checkout-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  color: $black;
+  flex-wrap: wrap;
+  figure {
+    width: 76px;
+    height: 56px;
+    padding: 5px;
+    overflow: hidden;
+    @include flexCenter;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+  .checkout-name {
+    margin-inline-end: 8px;
+  }
+}
+.checkout-table-cont {
+  padding: 32px 0 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.checkout-text {
+  font-weight: 400;
+  font-size: 20px;
+  color: $black;
+}
+.checkout-table {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 20px;
+  color: $black;
+  &.total {
+    font-weight: 700;
+  }
+}
+.checkout-dicount {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 32px 0;
+  border-bottom: 1px solid #e5e5e5;
+  @include max-500 {
+    flex-wrap: wrap;
+  }
+}
+.discount-input {
+  width: 100%;
+  max-width: 300px;
+  height: 56px;
+  border-radius: 8px;
+  outline: none !important;
+  border: 1px solid #b19e9e;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 0 24px;
+  color: $black;
+  @include tr;
+  &:focus {
+    border-color: $hover;
+  }
+  &::placeholder {
+    color: rgba($color: #000000, $alpha: 0.5);
+  }
+  @include max-500 {
+    max-width: 100%;
+  }
+}
+.discount-btn {
+  width: 193px;
+  height: 56px;
+  @include flexCenter;
+  @include tr;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  color: $black;
+  outline: none !important;
+  border: none;
+  &:hover,
+  &:focus {
+    background-color: $hover;
+    color: $white;
+  }
+  @include max-500 {
+    width: 100%;
+  }
+}
+.pay-group {
+  padding: 32px 0 40px;
+  border-bottom: 1px solid #e5e5e5;
+
+  .check-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 32px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  .check-label .checkmark {
+    border-color: $black;
+  }
+  .check-label input:checked ~ .checkmark {
+    border-color: $hover;
+  }
+  .span-text {
+    font-weight: 500;
+    font-size: 18px;
+    @include max-500 {
+      font-size: 16px;
+    }
+  }
+}
+.order-price {
+  flex-shrink: 0;
+}
+.pay-img {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+.custom-btn {
+  width: 100%;
+  height: 48px;
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 0;
+  margin-top: 54px;
+  @include flexCenter;
+  outline: none !important;
+  border: none;
+  text-decoration: none;
+  @include tr;
+  font-weight: 500;
+  font-size: 18px;
+  color: $white;
+  background-color: $hover;
+  &:hover,
+  &:focus {
+    background-color: $main;
+    color: $white;
+  }
+}
