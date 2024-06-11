@@ -417,6 +417,8 @@ html[dir="ltr"] .features-box .features-span {
 .item {
   position: relative;
   background-color: #fff;
+  width: 100%;
+  overflow: hidden;
 }
 
 .item .item-img-container {

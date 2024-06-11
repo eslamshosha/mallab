@@ -234,6 +234,15 @@ $(document).ready(function () {
     }
     $parentElm.find(".qty-input").val(value);
   });
+  if (window.innerWidth < 992) {
+    // Collaped all panel in small device
+    $(".panel-heading").click(function (e) {
+      e.stopPropagation();
+    });
+    $(".filters-mobile-btn").click(function (e) {
+      $(".filter-cont").toggleClass("active");
+    });
+  }
 });
 //showPass
 function showPass(showPass) {

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>mallab</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link href="https://iconsax.gitlab.io/i/icons.css" rel="stylesheet" />
+    <link href="css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/sal.css" />
+    <link rel="stylesheet" href="css/select2.min.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <!-- preloader -->
+    <div class="preloader">
+      <div class="progress">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <!-- preloader -->
+    <!-- header section -->
+    <header>
+      <div class="container">
+        <div class="top-header">
+          <div class="nav-header">
+            <a href="index.html" class="logo">
+              <h2>ملاعب</h2>
+            </a>
+            <div class="search-cont">
+              <div class="search-section">
+                <form class="search-form">
+                  <input
+                    class="search-input"
+                    type="text"
+                    name=""
+                    value=""
+                    placeholder="ابحث عن ما تريدة"
+                  />
+                  <button class="search-button">
+                    <i class="iconsax" icon-name="search-normal-2"></i>
+                  </button>
+                </form>
+              </div>
+              <button class="filter-btn">
+                <i class="iconsax" icon-name="filter-search"></i>
+                تصفية
+              </button>
+            </div>
+            <div class="header-btn">
+              <a href="#" class="cart-ancor">
+                <i class="iconsax" icon-name="shopping-cart"></i>
+                <span class="counter">0</span>
+              </a>
+              <button class="menu-bars" id="menu-id">
+                <i class="iconsax" icon-name="hamburger-menu"></i>
+              </button>
+            </div>
+            <div class="navgition">
+              <div class="nav-head">
+                <button class="close-menu">
+                  <i class="iconsax" icon-name="x"></i>
+                </button>
+              </div>
+              <ul class="big-menu list-unstyled">
+                <li>
+                  <a href="index.html"> الرئيسية </a>
+                </li>
+                <li>
+                  <a href="#"> ملاعب</a>
+                </li>
+                <li>
+                  <a href="#"> اكادميات</a>
+                </li>
+                <li>
+                  <a href="#"> بطولات</a>
+                </li>
+                <li class="active">
+                  <a href="#"> المتجر</a>
+                </li>
+                <li>
+                  <a href="#"> مقاطع</a>
+                </li>
+                <li>
+                  <a href="contact.html"> تواصل معنا</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header section     -->
+    <!-- Start Page Content -->
+    <section class="content-section single-content">
+      <div class="container">
+        <div class="filter-grid">
+          <div class="filter-cont">
+            <span class="filters-mobile-btn">
+              <i class="fa-solid fa-filter"></i>
+            </span>
+            <div class="filter-panel">
+              <div class="filter-cat">
+                <h2 class="acc-title">الاقسام</h2>
+                <div class="form-group">
+                  <div class="check-group">
+                    <div class="check-width">
+                      <label class="check-label">
+                        <input type="radio" name="cat" />
+                        <span class="checkmark"></span>
+                        <span class="span-text">الكل</span>
+                      </label>
+                    </div>
+                    <div class="check-width">
+                      <label class="check-label">
+                        <input type="radio" name="cat" />
+                        <span class="checkmark"></span>
+                        <span class="span-text">التيشرتات</span>
+                      </label>
+                    </div>
+                    <div class="check-width">
+                      <label class="check-label">
+                        <input type="radio" name="cat" />
+                        <span class="checkmark"></span>
+                        <span class="span-text">ادوات رياضية</span>
+                      </label>
+                    </div>
+                    <div class="check-width">
+                      <label class="check-label">
+                        <input type="radio" name="cat" />
+                        <span class="checkmark"></span>
+                        <span class="span-text">اطقم رياضية</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter-cat">
+                <h2 class="acc-title">ماركة</h2>
+                <div class="form-group">
+                  <div class="check-group">
+                    <div class="check-width">
+                      <label class="check-label">
+                        <input type="radio" name="brand" />
+                        <span class="checkmark"></span>
+                        <span class="span-text">الكل</span>
+                      </label>
+                    </div>
+                    <div class="check-width">
+                      <label class="check-label">
+                        <input type="radio" name="brand" />
+                        <span class="checkmark"></span>
+                        <span class="span-text">بوما</span>
+                      </label>
+                    </div>
+                    <div class="check-width">
+                      <label class="check-label">
+                        <input type="radio" name="brand" />
+                        <span class="checkmark"></span>
+                        <span class="span-text">كارفا</span>
+                      </label>
+                    </div>
+                    <div class="check-width">
+                      <label class="check-label">
+                        <input type="radio" name="brand" />
+                        <span class="checkmark"></span>
+                        <span class="span-text">نايك</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter-cat">
+                <h2 class="acc-title">ترتيب علي حسب</h2>
+                <div class="form-group">
+                  <div class="check-group">
+                    <div class="check-width">
+                      <label class="check-label">
+                        <input type="radio" name="sort" />
+                        <span class="checkmark"></span>
+                        <span class="span-text">الكل</span>
+                      </label>
+                    </div>
+                    <div class="check-width">
+                      <label class="check-label">
+                        <input type="radio" name="sort" />
+                        <span class="checkmark"></span>
+                        <span class="span-text">الاقل سعرا</span>
+                      </label>
+                    </div>
+                    <div class="check-width">
+                      <label class="check-label">
+                        <input type="radio" name="sort" />
+                        <span class="checkmark"></span>
+                        <span class="span-text">الاعلي سعر</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filter-cat">
+                <h2 class="acc-title">السعر</h2>
+                <div class="filter-input">
+                  <input
+                    type="text"
+                    class="item-input"
+                    placeholder="الاقل سعر"
+                  />
+                  <input
+                    type="text"
+                    class="item-input"
+                    placeholder="الاعلي سعر"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="items-filter">
+            <div class="items-header">
+              <div class="items-flex">
+                <h3 class="items-title">التصفيات المطبقة</h3>
+                <div class="item-result">
+                  <span>اجهزة الكترونية</span>
+                  <button><i class="fa-regular fa-xmark"></i></button>
+                </div>
+              </div>
+              <div class="result-number">
+                <span>Results found.</span>
+                <span class="result-num">65,867</span>
+              </div>
+            </div>
+            <div class="items-grid">
+              <div class="item">
+                <div class="item-img-container">
+                  <a href="product.html" class="item-img">
+                    <img class="img-fluid" src="images/product/01.png" />
+                  </a>
+                </div>
+                <h5 class="item-name-container">
+                  <a href="product.html" class="item-name">
+                    عطر باراديسو أزورو من روبرتو كفالي
+                  </a>
+                </h5>
+                <div class="prices">
+                  <del class="old-price"> 140 ر.س </del>
+                  <strong class="price"> 110 ر.س </strong>
+                </div>
+                <span class="sale">-40% </span>
+              </div>
+              <div class="item">
+                <div class="item-img-container">
+                  <a href="product.html" class="item-img">
+                    <img class="img-fluid" src="images/product/02.png" />
+                  </a>
+                </div>
+                <h5 class="item-name-container">
+                  <a href="product.html" class="item-name">
+                    عطر باراديسو أزورو من روبرتو كفالي
+                  </a>
+                </h5>
+                <div class="prices">
+                  <del class="old-price"> 140 ر.س </del>
+                  <strong class="price"> 110 ر.س </strong>
+                </div>
+                <span class="sale">-40% </span>
+              </div>
+              <div class="item">
+                <div class="item-img-container">
+                  <a href="product.html" class="item-img">
+                    <img class="img-fluid" src="images/product/03.png" />
+                  </a>
+                </div>
+                <h5 class="item-name-container">
+                  <a href="product.html" class="item-name">
+                    عطر باراديسو أزورو من روبرتو كفالي
+                  </a>
+                </h5>
+                <div class="prices">
+                  <del class="old-price"> 140 ر.س </del>
+                  <strong class="price"> 110 ر.س </strong>
+                </div>
+                <span class="sale">-40% </span>
+              </div>
+              <div class="item">
+                <div class="item-img-container">
+                  <a href="product.html" class="item-img">
+                    <img class="img-fluid" src="images/product/01.png" />
+                  </a>
+                </div>
+                <h5 class="item-name-container">
+                  <a href="product.html" class="item-name">
+                    عطر باراديسو أزورو من روبرتو كفالي
+                  </a>
+                </h5>
+                <div class="prices">
+                  <del class="old-price"> 140 ر.س </del>
+                  <strong class="price"> 110 ر.س </strong>
+                </div>
+                <span class="sale">-40% </span>
+              </div>
+              <div class="item">
+                <div class="item-img-container">
+                  <a href="product.html" class="item-img">
+                    <img class="img-fluid" src="images/product/02.png" />
+                  </a>
+                </div>
+                <h5 class="item-name-container">
+                  <a href="product.html" class="item-name">
+                    عطر باراديسو أزورو من روبرتو كفالي
+                  </a>
+                </h5>
+                <div class="prices">
+                  <del class="old-price"> 140 ر.س </del>
+                  <strong class="price"> 110 ر.س </strong>
+                </div>
+                <span class="sale">-40% </span>
+              </div>
+              <div class="item">
+                <div class="item-img-container">
+                  <a href="product.html" class="item-img">
+                    <img class="img-fluid" src="images/product/03.png" />
+                  </a>
+                </div>
+                <h5 class="item-name-container">
+                  <a href="product.html" class="item-name">
+                    عطر باراديسو أزورو من روبرتو كفالي
+                  </a>
+                </h5>
+                <div class="prices">
+                  <del class="old-price"> 140 ر.س </del>
+                  <strong class="price"> 110 ر.س </strong>
+                </div>
+                <span class="sale">-40% </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Page Content -->
+    <!-- footer section -->
+    <footer>
+      <div class="container">
+        <div class="footer-cont">
+          <div class="footer-info">
+            <a href="index.html" class="logo">
+              <h2>ملاعب</h2>
+            </a>
+            <div class="copy-rights">حقوق النشر © 2017 ملاعب مصر</div>
+            <div class="social">
+              <a href="#" class="social-link">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fa-brands fa-square-facebook"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-list">
+            <ul>
+              <li><a href="#">الشروط والاحكام</a></li>
+              <li><a href="#">عن التطبيق</a></li>
+              <li><a href="#">شروط الخصوصية</a></li>
+              <li><a href="#">الاسئلة الشائعة</a></li>
+            </ul>
+          </div>
+          <div class="empty-div"></div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer section -->
+    <!-- arrow to top -->
+    <button class="arrow-top">
+      <i class="iconsax" icon-name="arrow-up"></i>
+    </button>
+    <!-- arrow to top -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sal.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

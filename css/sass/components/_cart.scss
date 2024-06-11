@@ -1,0 +1,220 @@
+.cart-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  @include max-991 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+.cart-table {
+  overflow-x: auto;
+  border: 1px solid #e6e6e6;
+border-radius: 8px;
+}
+.table-group {
+  width: 100%;
+  border: none;
+  table-layout: fixed;
+
+  thead {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 16px 0;
+    th {
+      padding: 16px 24px;
+      font-weight: 500;
+      font-size: 16px;
+      color: #5a5a5a;
+    }
+  }
+  tbody {
+    td {
+      padding: 34px 24px;
+      font-weight: 500;
+      font-size: 18px;
+      color: $black;
+    }
+    tr {
+      position: relative;
+      border-bottom: 1px solid #e6e6e6;
+      border-spacing: 0 10px;
+      &:last-of-type{
+        border-bottom: 0;
+      }
+    }
+  }
+  tfoot {
+    tr {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .table-group {
+    width: 1115px;
+  }
+}
+@media (max-width: 991px) {
+  .table-group {
+    width: 890px;
+  }
+}
+.cart-flex {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 500;
+  font-size: 16px;
+  color: $black;
+  figure {
+    width: 76px;
+    height: 56px;
+    padding: 5px;
+    overflow: hidden;
+    @include flexCenter;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+.table-btn {
+  background-color: transparent;
+  width: 23px;
+  height: 23px;
+  outline: none !important;
+  font-size: 10px;
+  color: #666666;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 auto;
+  @include flexCenter;
+  border-radius: 50%;
+  border: 1px solid #cccccc;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: red;
+    border-color: red;
+  }
+}
+.item-qty {
+  width: 100%;
+  position: relative;
+  width: 124px;
+  height: 50px;
+  border-radius: 66px;
+  overflow: hidden;
+  border: 1px solid #e6e6e6;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  //   @include max-767 {
+  //     max-width: 100%;
+  //   }
+  .qty-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    font-size: 16px;
+    color: #1a1a1a;
+    font-weight: 400;
+    text-align: center;
+    border: none;
+  }
+}
+.qty-control {
+  position: absolute;
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #1a1a1a;
+  @include flexCenter;
+  @include tr;
+  background-color: #f2f2f2;
+  text-decoration: none;
+  &:hover {
+    background-color: $hover;
+    color: $white;
+  }
+}
+
+.qty-control:focus {
+  text-decoration: none;
+}
+
+.qty-control.qty-plus {
+  inset-inline-start: 8px;
+}
+
+.qty-control.qty-minus {
+  inset-inline-end: 8px;
+}
+.cart-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px;
+  border-top: 1px solid #e6e6e6;
+  button,
+  a {
+    max-width: 100%;
+    height: 45px;
+    border-radius: 23px;
+    @include flexCenter;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 14px;
+    color: #4d4d4d;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    cursor: pointer;
+    flex-shrink: 0;
+    background-color: #f2f2f2;
+    padding: 0 32px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      text-decoration: none;
+      color: $white;
+      background-color: $hover;
+    }
+  }
+}
+.cart-total {
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 24px 24px 40px;
+  .checkout-text {
+    font-size: 18px;
+  }
+  .custom-btn {
+    margin-top: 40px;
+    height: 56px;
+  }
+  .checkout-table-cont {
+    padding: 0 0 0;
+  }
+}
+.cart-table-head {
+  font-weight: 500;
+  font-size: 20px;
+  color: $black;
+  margin-bottom: 24px;
+}
