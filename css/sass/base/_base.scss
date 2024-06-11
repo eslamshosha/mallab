@@ -189,34 +189,47 @@ html[dir="ltr"] .progress-bar {
   align-items: center;
   justify-content: center;
   margin-top: 40px;
-  gap: 8px;
+  margin-bottom: 40px;
+  gap: 20px;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
 }
 .custom-pagention a {
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  color: $sec;
+  color: #191C1F;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   line-height: 40px;
   background-color: $white;
+  border: 1px solid #E4E7E9;
   text-decoration: none !important;
   transition: all 0.3s ease-in-out;
+  &.arrow{
+    border-color: $hover;
+    color: $hover;
+  }
 }
 .custom-pagention a.active {
   color: $white;
   background-color: $hover;
+  border-color: $hover;
 }
 .custom-pagention a:hover {
   color: $white;
   background-color: $hover;
 }
 .custom-pagention a i {
-  font-size: 16px;
+  font-size: 20px;
 }
 html[dir="ltr"] .custom-pagention a i {
   transform: scaleX(-1);

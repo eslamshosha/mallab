@@ -205,6 +205,13 @@ html[dir=ltr] .progress-bar {
   align-items: center;
   justify-content: center;
   margin-top: 40px;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+.custom-pagention div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 8px;
 }
 
@@ -213,21 +220,27 @@ html[dir=ltr] .progress-bar {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  color: var(--sec-color);
+  color: #191C1F;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   line-height: 40px;
   background-color: var(--white-color);
+  border: 1px solid #E4E7E9;
   text-decoration: none !important;
   transition: all 0.3s ease-in-out;
+}
+.custom-pagention a.arrow {
+  border-color: var(--main-hover);
+  color: var(--main-hover);
 }
 
 .custom-pagention a.active {
   color: var(--white-color);
   background-color: var(--main-hover);
+  border-color: var(--main-hover);
 }
 
 .custom-pagention a:hover {
@@ -236,7 +249,7 @@ html[dir=ltr] .progress-bar {
 }
 
 .custom-pagention a i {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 html[dir=ltr] .custom-pagention a i {
@@ -1593,7 +1606,7 @@ main {
   padding: 0 20px;
   border-radius: 5px;
   text-align: start;
-  color: #838e9e;
+  color: var(--black-color);
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 0;
@@ -4877,4 +4890,260 @@ html[dir=ltr] .section-more i {
 }
 .item-input:focus {
   border-color: var(--main-hover);
+}
+
+.orders-cont {
+  margin-top: 60px;
+}
+
+.orders-title {
+  font-weight: 400;
+  font-size: 20px;
+  color: #1d1e20;
+  margin-bottom: 24px;
+}
+
+.qty-number {
+  font-weight: 400;
+  font-size: 16px;
+  color: #1a1a1a;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 23px;
+}
+
+.order-status {
+  font-weight: 500;
+  font-size: 18px;
+}
+.order-status.deliverd {
+  color: var(--main-hover);
+}
+.order-status.pending {
+  color: #fe9110;
+}
+.order-status.uncompleted {
+  color: #F10917;
+}
+
+.account {
+  margin-top: 60px;
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.0588235294);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1003px;
+  padding: 60px 85px;
+}
+@media only screen and (max-width: 991px) {
+  .account {
+    padding: 60px 20px;
+  }
+}
+
+.account-details {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  margin-bottom: 32px;
+}
+
+#image-background {
+  background-size: cover;
+  background-position: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#image-background input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+#image-background i {
+  font-size: 16px;
+  color: var(--white-color);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+.profile-info-head {
+  font-weight: 400;
+  font-size: 20px;
+  color: #0d0c22;
+  margin-bottom: 5px;
+}
+
+.profile-info-text {
+  font-weight: 400;
+  font-size: 14px;
+  color: #6e6d7a;
+}
+
+.account-cont {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.acc-list-cont {
+  background: rgba(0, 121, 64, 0.03);
+  border-radius: 6px;
+  padding: 24px;
+  min-height: 272px;
+  width: 100%;
+  max-width: 156px;
+  flex-shrink: 0;
+}
+@media only screen and (max-width: 991px) {
+  .acc-list-cont {
+    display: none;
+  }
+}
+
+.acc-list-head {
+  font-weight: 500;
+  font-size: 15px;
+  color: #0d0c22;
+  margin-bottom: 15px;
+}
+
+.acc-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.acc-list li {
+  margin-bottom: 15px;
+}
+
+.acc-link {
+  font-weight: 400;
+  font-size: 15px;
+  color: #6e6d7a;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+.acc-link.active, .acc-link:hover {
+  color: var(--main-hover);
+}
+
+.acc-form {
+  padding-top: 15px;
+  width: 100%;
+}
+.acc-form .form-input {
+  color: #0d0c22;
+}
+.acc-form .form-label {
+  font-size: 16px;
+  color: #0d0c22;
+}
+.acc-form .select2-container--default .select2-selection--single {
+  background-color: var(--white-color);
+}
+.acc-form .select2-container .select2-selection--single {
+  height: 48px;
+  border: 1px solid #e6e8ec;
+}
+.acc-form .select2-container .select2-selection--single .select2-selection__rendered {
+  height: 48px;
+}
+
+.acc-btn {
+  width: 128px;
+  height: 48px;
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 0;
+  margin-top: 48px;
+  margin-inline-start: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none !important;
+  border: none;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--white-color);
+  background-color: var(--main-hover);
+}
+.acc-btn:hover, .acc-btn:focus {
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+.acc-btn.add-ancor {
+  margin: 0;
+  margin-inline-end: auto;
+  margin-bottom: 24px;
+}
+
+.address-item {
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.0588235294);
+  border-radius: 12px;
+  background-color: var(--white-color);
+  padding: 17px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.address-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #353535;
+}
+.address-info i {
+  font-size: 22px;
+}
+
+.address-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.address-btn button {
+  background-color: transparent;
+  outline: none !important;
+  border: none;
+  font-size: 24px;
+  color: #666666;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.address-btn button.edit {
+  color: var(--main-hover);
+}
+.address-btn button.delete {
+  color: #f10917;
+}
+.address-btn button:hover {
+  color: var(--main-color);
 }/*# sourceMappingURL=main.css.map */

@@ -113,263 +113,76 @@
       </div>
     </header>
     <!-- header section     -->
-    <!-- Start Breadcrumb -->
-    <section class="breadcrumb-sec">
-      <div class="container">
-        <ul class="breadcrumb">
-          <li class="breadcrumb-li">
-            <a href="index.html" class="breadcrumb-a"> الرئيسية </a>
-          </li>
-          <li class="breadcrumb-li">
-            <a href="store.html" class="breadcrumb-a"> المتجر </a>
-          </li>
-          <li class="breadcrumb-li">
-            <span> اكمال الطلب </span>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <!-- End Breadcrumb -->
     <!-- Start Page Content -->
     <section class="content-section single-content">
       <div class="container">
-        <div class="checkout-grid">
-          <div class="checkout-address">
-            <form action="">
-              <ul
-                class="nav nav-tabs add-address-cont"
-                id="myTab"
-                role="tablist"
-              >
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link add-select-address active"
-                    id="add-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#add"
-                    href="#add"
-                    type="button"
-                    role="tab"
-                    aria-controls="add"
-                    aria-selected="true"
-                  >
-                    <i class="fa-regular fa-plus"></i>
-                    اضافة عنوان جديد
-                  </button>
+        <div class="account">
+          <div class="account-details">
+            <div
+              id="image-background"
+              style="background-image: url(images/profile.jpeg)"
+            >
+              <input
+                type="file"
+                accept="image/*"
+                onchange="updateImage()"
+                id="js-imageUpload"
+              />
+              <i class="fa-regular fa-arrow-up-from-bracket"></i>
+            </div>
+            <script>
+              function updateImage() {
+                var imageBG = document.querySelector("#image-background"),
+                  file = document.querySelector("#js-imageUpload").files[0],
+                  reader = new FileReader();
+
+                reader.onloadend = function () {
+                  imageBG.style.backgroundImage = "url(" + reader.result + ")";
+                };
+
+                if (file) reader.readAsDataURL(file);
+                else imageBG.style.backgroundImage = "";
+              }
+            </script>
+            <div class="profile-info">
+              <div class="profile-info-head">
+                <span>عمر اشرف</span> , اعدادات عامة
+              </div>
+              <div class="profile-info-text">قم بتغيير اعدادتك الشخصية</div>
+            </div>
+          </div>
+          <div class="account-cont">
+            <div class="acc-list-cont">
+              <div class="acc-list-head">اعدادت عامة</div>
+              <ul class="acc-list">
+                <li class="acc-item">
+                  <a class="acc-link active" href="account.html">
+                    تغيير معلوماتك
+                  </a>
                 </li>
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link add-select-address"
-                    id="choose-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#choose"
-                    href="#choose"
-                    type="button"
-                    role="tab"
-                    aria-controls="choose"
-                    aria-selected="false"
-                  >
-                    <i class="las la-address-book"></i>
-                    اختر من عناوينك
-                  </button>
+                <li class="acc-item">
+                  <a class="acc-link" href="account-password.html">
+                    كلمة السر
+                  </a>
+                </li>
+                <li class="acc-item">
+                  <a class="acc-link" href="account-address.html"> العناوين </a>
                 </li>
               </ul>
-              <div class="tab-content" id="myTabContent">
-                <div
-                  class="tab-pane fade show active"
-                  id="add"
-                  role="tabpanel"
-                  aria-labelledby="add-tab"
-                >
-                  <div class="checkout-input">
-                    <div class="form-group">
-                      <label class="form-label">الاسم بالكامل</label>
-                      <input type="text" class="form-input custom-input" />
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label">المدينة</label>
-                      <div class="form-input-relative custom-input">
-                        <i class="las la-angle-down angle-select"></i>
-                        <i
-                          class="iconsax angle-select"
-                          icon-name="chevron-down"
-                        ></i>
-
-                        <select class="select_input select2-city" name="city">
-                          <option value="two">الرياض</option>
-                          <option value="three">المدينة</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label">عنوان التسليم</label>
-                      <input type="text" class="form-input custom-input" />
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label">رقم الدور والمبني</label>
-                      <input type="text" class="form-input custom-input" />
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label">تفاصيل اضافية</label>
-                      <input type="text" class="form-input custom-input" />
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label">رقم الموبايل</label>
-                      <input type="tel" class="form-input custom-input" />
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label">البريد الالكنروني</label>
-                      <input type="email" class="form-input custom-input" />
-                    </div>
-                    <div class="form-group">
-                      <div class="check-width">
-                        <label class="check-label">
-                          <input type="checkbox" />
-                          <span class="checkmark custom-checkmark"></span>
-                          <span class="check-text"
-                            >موافقة علي جميع الشروط والاحكام</span
-                          >
-                        </label>
-                      </div>
-                    </div>
-                    <button type="submit" class="apply-btn">حفظ</button>
-                  </div>
+            </div>
+            <div class="acc-form">
+              <form action="">
+                <div class="form-group">
+                  <label class="form-label">الاسم</label>
+                  <input type="text" class="form-input" />
                 </div>
-                <div
-                  class="tab-pane fade"
-                  id="choose"
-                  role="tabpanel"
-                  aria-labelledby="choose-tab"
-                >
-                  <div class="address-group">
-                    <span class="address-head">اختر من عناوينك</span>
-                    <div class="check-group">
-                      <div class="check-width">
-                        <label class="check-label">
-                          <input type="radio" name="address" />
-                          <span class="checkmark"></span>
-                          <span class="span-text"
-                            >الدمام , السعوديه , مركز باشالوش الوطني</span
-                          >
-                        </label>
-                      </div>
-                      <div class="check-width">
-                        <label class="check-label">
-                          <input type="radio" name="address" />
-                          <span class="checkmark"></span>
-                          <span class="span-text"
-                            >الدمام , السعوديه , مركز باشالوش الوطني</span
-                          >
-                        </label>
-                      </div>
-                      <div class="check-width">
-                        <label class="check-label">
-                          <input type="radio" name="address" />
-                          <span class="checkmark"></span>
-                          <span class="span-text"
-                            >الدمام , السعوديه , مركز باشالوش الوطني</span
-                          >
-                        </label>
-                      </div>
-                    </div>
-                  </div>
+                <div class="form-group">
+                  <label class="form-label">الايميل</label>
+                  <input type="text" class="form-input" />
                 </div>
-              </div>
-            </form>
-          </div>
-          <div class="checkout-pay">
-            <form action="">
-              <div class="checkout-item">
-                <div class="checkout-info">
-                  <figure>
-                    <img src="images/offer/img.png" alt="product" />
-                  </figure>
-                  <div class="checkout-name">
-                    حذاء رياضي خاص من ماركة اديداس
-                  </div>
-                  <div class="checkout-span">ك:٢</div>
-                </div>
-                <div class="order-price">245 ريال</div>
-              </div>
-              <div class="checkout-item">
-                <div class="checkout-info">
-                  <figure>
-                    <img src="images/offer/img.png" alt="product" />
-                  </figure>
-                  <div class="checkout-name">
-                    حذاء رياضي خاص من ماركة اديداس
-                  </div>
-                  <div class="checkout-span">ك:٢</div>
-                </div>
-                <div class="order-price">245 ريال</div>
-              </div>
-              <div class="checkout-table-cont">
-                <div class="checkout-table">
-                  <span class="checkout-text"> المجموع </span>
-                  <div class="order-price">245 ريال</div>
-                </div>
-                <div class="checkout-table">
-                  <span class="checkout-text"> التوصيل </span>
-                  <div class="order-price">245 ريال</div>
-                </div>
-                <div class="checkout-table">
-                  <span class="checkout-text"> الخصم </span>
-                  <div class="order-price">245 ريال</div>
-                </div>
-                <div class="checkout-table total">
-                  <span class="checkout-text"> المجموع الكلي </span>
-                  <div class="order-price">245 ريال</div>
-                </div>
-              </div>
-              <div class="checkout-dicount">
-                <input
-                  type="text"
-                  placeholder="كود خصم"
-                  class="discount-input"
-                />
-                <button type="button" class="discount-btn">
-                  اضافة الكوبون
-                </button>
-              </div>
-              <div class="pay-group">
-                <div class="check-group">
-                  <div class="check-width">
-                    <label class="check-label">
-                      <input type="radio" name="address" />
-                      <span class="checkmark"></span>
-                      <span class="span-text">بنك</span>
-                    </label>
-                    <figure class="pay-img">
-                      <img src="images/pay-img.png" alt="pay-img" />
-                    </figure>
-                  </div>
-                  <div class="check-width">
-                    <label class="check-label">
-                      <input type="radio" name="address" />
-                      <span class="checkmark"></span>
-                      <span class="span-text">مدي</span>
-                    </label>
-                    <img src="images/pay-img.png" alt="pay-img" />
-                  </div>
-                  <div class="check-width">
-                    <label class="check-label">
-                      <input type="radio" name="address" />
-                      <span class="checkmark"></span>
-                      <span class="span-text">فوري</span>
-                    </label>
-                    <img src="images/pay-img.png" alt="pay-img" />
-                  </div>
-                  <div class="check-width">
-                    <label class="check-label">
-                      <input type="radio" name="address" />
-                      <span class="checkmark"></span>
-                      <span class="span-text">الدفع عند الاستلام</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <button type="submit" class="custom-btn">اتمام الشراء</button>
-            </form>
+                <button type="submit" class="acc-btn">حفظ</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

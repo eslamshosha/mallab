@@ -201,3 +201,36 @@
     border-color: $hover;
   }
 }
+.orders-cont {
+  margin-top: 60px;
+}
+.orders-title {
+  font-weight: 400;
+  font-size: 20px;
+  color: #1d1e20;
+  margin-bottom: 24px;
+}
+.qty-number {
+  font-weight: 400;
+  font-size: 16px;
+  color: #1a1a1a;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #e6e6e6;
+  @include flexCenter;
+  width: max-content;
+  padding: 0 23px;
+}
+.order-status {
+  font-weight: 500;
+  font-size: 18px;
+  &.deliverd {
+    color: $hover;
+  }
+  &.pending {
+    color: #fe9110;
+  }
+  &.uncompleted {
+    color: #F10917;
+  }
+}

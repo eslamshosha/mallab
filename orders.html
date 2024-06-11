@@ -113,27 +113,11 @@
       </div>
     </header>
     <!-- header section     -->
-    <!-- Start Breadcrumb -->
-    <section class="breadcrumb-sec">
-      <div class="container">
-        <ul class="breadcrumb">
-          <li class="breadcrumb-li">
-            <a href="index.html" class="breadcrumb-a"> الرئيسية </a>
-          </li>
-          <li class="breadcrumb-li">
-            <a href="store.html" class="breadcrumb-a"> المتجر </a>
-          </li>
-          <li class="breadcrumb-li">
-            <span> السلة</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <!-- End Breadcrumb -->
     <!-- Start Page Content -->
     <section class="content-section single-content">
       <div class="container">
-        <div class="cart-grid">
+        <div class="orders-cont">
+          <h3 class="orders-title">الطلبات السابقة</h3>
           <div class="cart-table">
             <table class="table-group">
               <thead>
@@ -141,8 +125,8 @@
                   <th colspan="5">المنتج</th>
                   <th colspan="2">السعر</th>
                   <th colspan="2">الكمية</th>
-                  <th colspan="2">المبلغ كامل</th>
-                  <th colspan="1"></th>
+                  <th colspan="2">الحالة</th>
+                  <th colspan="2">التاريخ</th>
                 </tr>
               </thead>
               <tbody>
@@ -157,28 +141,12 @@
                   </td>
                   <td colspan="2">245 ريال</td>
                   <td colspan="2">
-                    <div class="item-qty">
-                      <a role="button" class="qty-control qty-plus">
-                        <i class="fa-regular fa-plus"></i>
-                      </a>
-                      <a role="button" class="qty-control qty-minus">
-                        <i class="fa-regular fa-minus"></i>
-                      </a>
-                      <input
-                        type="number"
-                        class="qty-input"
-                        value="1"
-                        data-max="10"
-                        data-min="1"
-                      />
-                    </div>
+                    <div class="qty-number">5</div>
                   </td>
-                  <td colspan="2">٥٩٣ ريال</td>
-                  <td colspan="1" class="table-sm-btn">
-                    <button class="table-btn">
-                      <i class="fa-regular fa-xmark"></i>
-                    </button>
+                  <td colspan="2">
+                    <span class="order-status deliverd">تم التوصيل</span>
                   </td>
+                  <td colspan="2">3 ابريل و 2022</td>
                 </tr>
                 <tr>
                   <td colspan="5">
@@ -191,53 +159,66 @@
                   </td>
                   <td colspan="2">245 ريال</td>
                   <td colspan="2">
-                    <div class="item-qty">
-                      <a role="button" class="qty-control qty-plus">
-                        <i class="fa-regular fa-plus"></i>
-                      </a>
-                      <a role="button" class="qty-control qty-minus">
-                        <i class="fa-regular fa-minus"></i>
-                      </a>
-                      <input
-                        type="number"
-                        class="qty-input"
-                        value="1"
-                        data-max="10"
-                        data-min="1"
-                      />
+                    <div class="qty-number">5</div>
+                  </td>
+                  <td colspan="2">
+                    <span class="order-status pending">قيد الانتظار</span>
+                  </td>
+                  <td colspan="2">3 ابريل و 2022</td>
+                </tr>
+                <tr>
+                  <td colspan="5">
+                    <div class="cart-flex">
+                      <figure class="cart-figure">
+                        <img class="img-fluid" src="images/offer/img.png" />
+                      </figure>
+                      <div class="cart-content">حذاء رياضي خاص</div>
                     </div>
                   </td>
-                  <td colspan="2">٥٩٣ ريال</td>
-                  <td colspan="1" class="table-sm-btn">
-                    <button class="table-btn">
-                      <i class="fa-regular fa-xmark"></i>
-                    </button>
+                  <td colspan="2">245 ريال</td>
+                  <td colspan="2">
+                    <div class="qty-number">5</div>
                   </td>
+                  <td colspan="2">
+                    <span class="order-status deliverd">تم التوصيل</span>
+                  </td>
+                  <td colspan="2">3 ابريل و 2022</td>
+                </tr>
+                <tr>
+                  <td colspan="5">
+                    <div class="cart-flex">
+                      <figure class="cart-figure">
+                        <img class="img-fluid" src="images/offer/img.png" />
+                      </figure>
+                      <div class="cart-content">حذاء رياضي خاص</div>
+                    </div>
+                  </td>
+                  <td colspan="2">245 ريال</td>
+                  <td colspan="2">
+                    <div class="qty-number">5</div>
+                  </td>
+                  <td colspan="2">
+                    <span class="order-status uncompleted">لم يكتمل</span>
+                  </td>
+                  <td colspan="2">3 ابريل و 2022</td>
                 </tr>
               </tbody>
             </table>
-            <div class="cart-btns">
-              <button type="button">تحديث السلة</button>
-              <a href="#">العودة للتسوق</a>
+            <div class="custom-pagention">
+              <a href="#" class="arrow"
+                ><i class="fa-regular fa-arrow-right"></i
+              ></a>
+              <div class="div">
+                <a href="#" class="active">01</a>
+                <a href="#">02</a>
+                <a href="#">03</a>
+                <a href="#">04</a>
+                <a href="#">05</a>
+              </div>
+              <a href="#" class="arrow"
+                ><i class="fa-regular fa-arrow-left"></i
+              ></a>
             </div>
-          </div>
-          <div class="cart-total">
-            <div class="checkout-table-cont">
-              <h5 class="cart-table-head">مجموع الطلب</h5>
-              <div class="checkout-table">
-                <span class="checkout-text"> المجموع </span>
-                <div class="order-price">245 ريال</div>
-              </div>
-              <div class="checkout-table">
-                <span class="checkout-text"> التوصيل </span>
-                <div class="order-price">245 ريال</div>
-              </div>
-              <div class="checkout-table total">
-                <span class="checkout-text"> المجموع الكلي </span>
-                <div class="order-price">245 ريال</div>
-              </div>
-            </div>
-            <button type="submit" class="custom-btn">اتمام الشراء</button>
           </div>
         </div>
       </div>

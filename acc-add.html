@@ -113,131 +113,89 @@
       </div>
     </header>
     <!-- header section     -->
-    <!-- Start Breadcrumb -->
-    <section class="breadcrumb-sec">
-      <div class="container">
-        <ul class="breadcrumb">
-          <li class="breadcrumb-li">
-            <a href="index.html" class="breadcrumb-a"> الرئيسية </a>
-          </li>
-          <li class="breadcrumb-li">
-            <a href="store.html" class="breadcrumb-a"> المتجر </a>
-          </li>
-          <li class="breadcrumb-li">
-            <span> السلة</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <!-- End Breadcrumb -->
     <!-- Start Page Content -->
     <section class="content-section single-content">
       <div class="container">
-        <div class="cart-grid">
-          <div class="cart-table">
-            <table class="table-group">
-              <thead>
-                <tr>
-                  <th colspan="5">المنتج</th>
-                  <th colspan="2">السعر</th>
-                  <th colspan="2">الكمية</th>
-                  <th colspan="2">المبلغ كامل</th>
-                  <th colspan="1"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td colspan="5">
-                    <div class="cart-flex">
-                      <figure class="cart-figure">
-                        <img class="img-fluid" src="images/offer/img.png" />
-                      </figure>
-                      <div class="cart-content">حذاء رياضي خاص</div>
-                    </div>
-                  </td>
-                  <td colspan="2">245 ريال</td>
-                  <td colspan="2">
-                    <div class="item-qty">
-                      <a role="button" class="qty-control qty-plus">
-                        <i class="fa-regular fa-plus"></i>
-                      </a>
-                      <a role="button" class="qty-control qty-minus">
-                        <i class="fa-regular fa-minus"></i>
-                      </a>
-                      <input
-                        type="number"
-                        class="qty-input"
-                        value="1"
-                        data-max="10"
-                        data-min="1"
-                      />
-                    </div>
-                  </td>
-                  <td colspan="2">٥٩٣ ريال</td>
-                  <td colspan="1" class="table-sm-btn">
-                    <button class="table-btn">
-                      <i class="fa-regular fa-xmark"></i>
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="5">
-                    <div class="cart-flex">
-                      <figure class="cart-figure">
-                        <img class="img-fluid" src="images/offer/img.png" />
-                      </figure>
-                      <div class="cart-content">حذاء رياضي خاص</div>
-                    </div>
-                  </td>
-                  <td colspan="2">245 ريال</td>
-                  <td colspan="2">
-                    <div class="item-qty">
-                      <a role="button" class="qty-control qty-plus">
-                        <i class="fa-regular fa-plus"></i>
-                      </a>
-                      <a role="button" class="qty-control qty-minus">
-                        <i class="fa-regular fa-minus"></i>
-                      </a>
-                      <input
-                        type="number"
-                        class="qty-input"
-                        value="1"
-                        data-max="10"
-                        data-min="1"
-                      />
-                    </div>
-                  </td>
-                  <td colspan="2">٥٩٣ ريال</td>
-                  <td colspan="1" class="table-sm-btn">
-                    <button class="table-btn">
-                      <i class="fa-regular fa-xmark"></i>
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="cart-btns">
-              <button type="button">تحديث السلة</button>
-              <a href="#">العودة للتسوق</a>
+        <div class="account">
+          <div class="account-details">
+            <div
+              id="image-background"
+              style="background-image: url(images/profile.jpeg)"
+            >
+              <input
+                type="file"
+                accept="image/*"
+                onchange="updateImage()"
+                id="js-imageUpload"
+              />
+              <i class="fa-regular fa-arrow-up-from-bracket"></i>
+            </div>
+            <script>
+              function updateImage() {
+                var imageBG = document.querySelector("#image-background"),
+                  file = document.querySelector("#js-imageUpload").files[0],
+                  reader = new FileReader();
+
+                reader.onloadend = function () {
+                  imageBG.style.backgroundImage = "url(" + reader.result + ")";
+                };
+
+                if (file) reader.readAsDataURL(file);
+                else imageBG.style.backgroundImage = "";
+              }
+            </script>
+            <div class="profile-info">
+              <div class="profile-info-head">
+                <span>عمر اشرف</span> , اعدادات عامة
+              </div>
+              <div class="profile-info-text">قم بتغيير اعدادتك الشخصية</div>
             </div>
           </div>
-          <div class="cart-total">
-            <div class="checkout-table-cont">
-              <h5 class="cart-table-head">مجموع الطلب</h5>
-              <div class="checkout-table">
-                <span class="checkout-text"> المجموع </span>
-                <div class="order-price">245 ريال</div>
-              </div>
-              <div class="checkout-table">
-                <span class="checkout-text"> التوصيل </span>
-                <div class="order-price">245 ريال</div>
-              </div>
-              <div class="checkout-table total">
-                <span class="checkout-text"> المجموع الكلي </span>
-                <div class="order-price">245 ريال</div>
-              </div>
+          <div class="account-cont">
+            <div class="acc-list-cont">
+              <div class="acc-list-head">اعدادت عامة</div>
+              <ul class="acc-list">
+                <li class="acc-item">
+                  <a class="acc-link" href="account.html"> تغيير معلوماتك </a>
+                </li>
+                <li class="acc-item">
+                  <a class="acc-link active" href="account-password.html">
+                    كلمة السر
+                  </a>
+                </li>
+                <li class="acc-item">
+                  <a class="acc-link" href="account-address.html"> العناوين </a>
+                </li>
+              </ul>
             </div>
-            <button type="submit" class="custom-btn">اتمام الشراء</button>
+            <div class="acc-form">
+              <form action="">
+                <div class="form-group">
+                  <label class="form-label">المدينة</label>
+                  <div class="form-input-relative custom-input">
+                    <i class="las la-angle-down angle-select"></i>
+                    <i
+                      class="iconsax angle-select"
+                      icon-name="chevron-down"
+                    ></i>
+
+                    <select class="select_input select2-city" name="city">
+                      <option value="two">الرياض</option>
+                      <option value="three">المدينة</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">عنوان التسليم</label>
+                  <input type="text" class="form-input" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">رقم الدور والمبني</label>
+                  <input type="text" class="form-input" />
+                </div>
+                <button type="submit" class="acc-btn">حفظ</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
