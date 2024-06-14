@@ -59,7 +59,10 @@
 .header-btn {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
+  @include max-991{
+    gap: 15px;
+  }
 }
 .menu-bars {
   padding: 0;
@@ -83,10 +86,9 @@
 /*                          dropdown                            */
 header {
   width: 100%;
-  z-index: 200;
   transition: all 0.3s ease-in-out;
   position: relative;
-  z-index: 1;
+  z-index: 9;
   background-color: $white;
   box-shadow: 0px 4px 10px 0px #0000000f;
 }
@@ -175,10 +177,10 @@ header {
 }
 .search-section {
   position: relative;
-  width: 320px;
+  width: 250px;
   max-width: 100%;
   @include min-1440 {
-    width: 360px;
+    width: 256px;
   }
 }
 .search-input {
@@ -213,19 +215,13 @@ header {
   inset-inline-start: 16px;
   border-radius: 50%;
   transform: translateY(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   color: #666666;
   background-color: transparent;
   border: none;
-  font-size: 24px;
+  font-size: 20px;
   padding: 0;
   transition: 0.3s;
   @include max-991 {
@@ -294,6 +290,77 @@ header {
   font-weight: 500;
   border-radius: 50%;
 }
+.user-profile .dropdown-toggle::after,
+.user-notification .dropdown-toggle::after {
+  display: none;
+}
+.user-profile {
+  cursor: pointer;
+}
+.user-profile .user-cont {
+  display: flex;
+  align-items: center;
+}
+.user-profile .profile-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+.user-profile .user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #1d1e20;
+}
+.user-info i {
+  font-size: 18px;
+  @include tr;
+  .show & {
+    display: inline-block;
+    transform: rotate(180deg);
+  }
+}
+.profile-menu {
+  position: relative;
+  border-radius: 10px;
+  padding: 16px;
+  border: none;
+  box-shadow: 0px 4px 40px 0px #0000000a;
+  background: #fefefe;
+  max-width: 258px;
+  min-width: 208px;
+}
+.profile-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start !important;
+  gap: 8px;
+  margin-bottom: 18px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #252729;
+  transition: 0.3s;
+  &.logout {
+    color: #ff443a;
+    i {
+      color: #ff443a;
+      display: inline-block;
+      transform: scaleX(-1);
+    }
+  }
+  i {
+    font-size: 24px;
+    color: #787486;
+  }
+}
+.profile-menu a:hover {
+  color: $hover;
+  i {
+    color: $hover;
+  }
+}
 /*                          header section                     */
 /*                    menu in phone size                      */
 
@@ -320,7 +387,7 @@ header {
     max-width: 120px;
   }
   .nav-header {
-    padding: 15px 0;
+    padding: 20px 0;
   }
   .btn-cont {
     display: none;

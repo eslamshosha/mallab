@@ -384,7 +384,12 @@ ul.breadcrumb li a:hover {
 .header-btn {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
+}
+@media only screen and (max-width: 991px) {
+  .header-btn {
+    gap: 15px;
+  }
 }
 
 .menu-bars {
@@ -409,10 +414,9 @@ ul.breadcrumb li a:hover {
 /*                          dropdown                            */
 header {
   width: 100%;
-  z-index: 200;
   transition: all 0.3s ease-in-out;
   position: relative;
-  z-index: 1;
+  z-index: 9;
   background-color: var(--white-color);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.0588235294);
 }
@@ -517,12 +521,12 @@ header {
 
 .search-section {
   position: relative;
-  width: 320px;
+  width: 250px;
   max-width: 100%;
 }
 @media only screen and (min-width: 1440px) {
   .search-section {
-    width: 360px;
+    width: 256px;
   }
 }
 
@@ -573,7 +577,7 @@ header {
   color: #666666;
   background-color: transparent;
   border: none;
-  font-size: 24px;
+  font-size: 20px;
   padding: 0;
   transition: 0.3s;
 }
@@ -651,6 +655,86 @@ header {
   border-radius: 50%;
 }
 
+.user-profile .dropdown-toggle::after,
+.user-notification .dropdown-toggle::after {
+  display: none;
+}
+
+.user-profile {
+  cursor: pointer;
+}
+
+.user-profile .user-cont {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile .profile-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+.user-profile .user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #1d1e20;
+}
+
+.user-info i {
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+}
+.show .user-info i {
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
+.profile-menu {
+  position: relative;
+  border-radius: 10px;
+  padding: 16px;
+  border: none;
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.0392156863);
+  background: #fefefe;
+  max-width: 258px;
+  min-width: 208px;
+}
+
+.profile-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start !important;
+  gap: 8px;
+  margin-bottom: 18px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #252729;
+  transition: 0.3s;
+}
+.profile-menu a.logout {
+  color: #ff443a;
+}
+.profile-menu a.logout i {
+  color: #ff443a;
+  display: inline-block;
+  transform: scaleX(-1);
+}
+.profile-menu a i {
+  font-size: 24px;
+  color: #787486;
+}
+
+.profile-menu a:hover {
+  color: var(--main-hover);
+}
+.profile-menu a:hover i {
+  color: var(--main-hover);
+}
+
 /*                          header section                     */
 /*                    menu in phone size                      */
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -676,7 +760,7 @@ header {
     max-width: 120px;
   }
   .nav-header {
-    padding: 15px 0;
+    padding: 20px 0;
   }
   .btn-cont {
     display: none;

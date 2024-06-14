@@ -64,7 +64,7 @@
                     type="text"
                     name=""
                     value=""
-                    placeholder="ابحث عن ما تريدة"
+                    placeholder="ابحث..."
                   />
                   <button class="search-button">
                     <i class="iconsax" icon-name="search-normal-2"></i>
@@ -76,15 +76,7 @@
                 تصفية
               </button>
             </div>
-            <div class="header-btn">
-              <a href="#" class="cart-ancor">
-                <i class="iconsax" icon-name="shopping-cart"></i>
-                <span class="counter">0</span>
-              </a>
-              <button class="menu-bars" id="menu-id">
-                <i class="iconsax" icon-name="hamburger-menu"></i>
-              </button>
-            </div>
+
             <div class="navgition">
               <div class="nav-head">
                 <button class="close-menu">
@@ -92,7 +84,7 @@
                 </button>
               </div>
               <ul class="big-menu list-unstyled">
-                <li>
+                <li class="active">
                   <a href="index.html"> الرئيسية </a>
                 </li>
                 <li>
@@ -104,16 +96,66 @@
                 <li>
                   <a href="#"> بطولات</a>
                 </li>
-                <li class="active">
-                  <a href="#"> المتجر</a>
+                <li>
+                  <a href="store.html"> المتجر</a>
                 </li>
                 <li>
                   <a href="#"> مقاطع</a>
                 </li>
-                <li>
-                  <a href="contact.html"> تواصل معنا</a>
-                </li>
               </ul>
+            </div>
+            <div class="header-btn">
+              <a href="cart.html" class="cart-ancor">
+                <i class="iconsax" icon-name="shopping-cart"></i>
+                <span class="counter">0</span>
+              </a>
+              <div class="user-profile dropdown">
+                <div
+                  class="user-cont dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  role="button"
+                  aria-expanded="false"
+                >
+                  <div class="user-info">
+                    <img
+                      src="images/profile-1.png"
+                      class="profile-img"
+                      alt="User-Profile-Image"
+                    />
+                    <span>عمر اشرف</span>
+                    <i class="iconsax" icon-name="chevron-down"></i>
+                  </div>
+                </div>
+                <ul class="profile-menu dropdown-menu">
+                  <li>
+                    <a href="account.html">
+                      <i class="iconsax" icon-name="user-1"></i>
+                      <span>حسابي</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="orders.html">
+                      <i class="iconsax" icon-name="basket-tick-1"></i>
+                      <span>طلباتي السابقة</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!">
+                      <i class="iconsax" icon-name="message-dash-2"></i>
+                      <span>تواصل معنا</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!" class="logout">
+                      <i class="iconsax" icon-name="logout-2"></i>
+                      <span>حسابي</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button class="menu-bars" id="menu-id">
+                <i class="iconsax" icon-name="hamburger-menu"></i>
+              </button>
             </div>
           </div>
         </div>
@@ -269,22 +311,26 @@
                     <div class="check-width">
                       <label class="check-label">
                         <input type="radio" name="color" />
-                        <span class="checkmark" style="background-color: red;"></span>
+                        <span
+                          class="checkmark"
+                          style="background-color: red"
+                        ></span>
                       </label>
                     </div>
                     <div class="check-width">
                       <label class="check-label">
-                        <input type="radio" name="color"/>
-                        <span class="checkmark" style="background-color: black;"></span>
+                        <input type="radio" name="color" />
+                        <span
+                          class="checkmark"
+                          style="background-color: black"
+                        ></span>
                       </label>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="single-options">
-                <button class="item-addToCart">
-                  اضف إلى السلة
-                </button>
+                <button class="item-addToCart">اضف إلى السلة</button>
                 <div class="item-qty single-item-qty">
                   <a role="button" class="single-qty-control qty-plus">
                     <i class="fa-light fa-plus"></i>
@@ -453,7 +499,7 @@
     </button>
     <!-- arrow to top -->
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/sal.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script
