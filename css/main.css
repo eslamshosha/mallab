@@ -4067,7 +4067,8 @@ html[dir=ltr] .section-more i {
   -moz-appearance: textfield;
 }
 @media only screen and (max-width: 767px) {
-  .single-item-qty {
+  .single-item-qty.item-qty {
+    width: 100%;
     max-width: 100%;
   }
 }
@@ -4126,6 +4127,11 @@ html[dir=ltr] .section-more i {
 .single-qty-control.qty-minus:hover {
   background-color: var(--main-color);
   color: var(--white-color);
+}
+@media only screen and (max-width: 767px) {
+  .single-qty-control.qty-minus {
+    border-radius: 25px 0px 0px 25px;
+  }
 }
 
 .item-request,
