@@ -4859,7 +4859,7 @@ html[dir=ltr] .section-more i {
 }
 @media only screen and (max-width: 991px) {
   .items-grid {
-    grid-template-columns: 2fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
@@ -5019,7 +5019,7 @@ html[dir=ltr] .section-more i {
   color: #fe9110;
 }
 .order-status.uncompleted {
-  color: #F10917;
+  color: #f10917;
 }
 
 .account {

@@ -85,7 +85,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   @include max-991 {
-    grid-template-columns: 2fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
@@ -231,6 +231,6 @@
     color: #fe9110;
   }
   &.uncompleted {
-    color: #F10917;
+    color: #f10917;
   }
 }
