@@ -4121,7 +4121,7 @@ html[dir=ltr] .section-more i {
 
 .single-qty-control.qty-minus {
   inset-inline-end: 0;
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 25px 0px 0px 25px;
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
 .single-qty-control.qty-minus:hover {
@@ -4631,10 +4631,13 @@ html[dir=ltr] .section-more i {
   border-color: red;
 }
 
+.cart-table .item-qty {
+  width: 124px;
+}
+
 .item-qty {
   width: 100%;
   position: relative;
-  width: 124px;
   height: 50px;
   border-radius: 66px;
   overflow: hidden;

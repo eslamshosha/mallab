@@ -101,10 +101,14 @@ border-radius: 8px;
     border-color: red;
   }
 }
+.cart-table{
+  .item-qty {
+    width: 124px;
+  }
+}
 .item-qty {
   width: 100%;
   position: relative;
-  width: 124px;
   height: 50px;
   border-radius: 66px;
   overflow: hidden;
